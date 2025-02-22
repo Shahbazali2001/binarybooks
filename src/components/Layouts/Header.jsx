@@ -19,18 +19,10 @@ const Header = () => {
             </span>
           </Link>
           <div className="flex items-center space-x-6 rtl:space-x-reverse">
-            <a
-              href="tel:5541251234"
-              className="text-sm  text-gray-500 dark:text-white hover:underline"
-            >
-              (555) 412-1234
-            </a>
-            <a
-              href="#"
-              className="text-sm  text-blue-600 dark:text-blue-500 hover:underline"
-            >
-              Login
-            </a>
+            <span className="bi bi-gear-wide-connected cursor-pointer text-xl text-gray-500 dark:text-white"></span>
+            <span className="bi bi-search cursor-pointer text-xl text-gray-500 dark:text-white"></span>
+            <span className="bi bi-cart-fill cursor-pointer text-xl text-gray-500 dark:text-white"></span>
+            <span className="bi bi-person-circle cursor-pointer text-xl text-gray-500 dark:text-white"></span>
           </div>
         </div>
       </nav>
