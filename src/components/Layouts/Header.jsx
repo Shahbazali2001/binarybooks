@@ -21,7 +21,13 @@ const Header = () => {
           <div className="flex items-center space-x-6 rtl:space-x-reverse">
             <span className="bi bi-gear-wide-connected cursor-pointer text-xl text-gray-500 dark:text-white"></span>
             <span className="bi bi-search cursor-pointer text-xl text-gray-500 dark:text-white"></span>
-            <span className="bi bi-cart-fill cursor-pointer text-xl text-gray-500 dark:text-white"></span>
+                <Link
+                  to="/cart"
+                  className="bi bi-cart-plus cursor-pointer text-xl text-gray-500 dark:text-white"
+                >
+                  <span className="absolute top-4 right-15 inline-flex items-center justify-center w-4 h-4 text-xs font-semibold text-white bg-red-500 rounded-full dark:bg-red-700">3</span>
+                </Link>
+            
             <span className="bi bi-person-circle cursor-pointer text-xl text-gray-500 dark:text-white"></span>
           </div>
         </div>
