@@ -6,7 +6,7 @@ const Hero = () => {
       <div className="text my-5">
         <h1 className="text-5xl font-bold">The Ultimate eBook Store</h1>
         <p className="text-2xl my-7 px-1 dark:text-slate-300">
-          Binary Books is the world's most popular and authoritative source for
+          Binary Books is the Pakistan's most popular and authoritative source for
           computer science ebooks. Find ratings and access to the newest books
           digitally.
         </p>
