@@ -7,6 +7,7 @@ import Faq from './components/Faq'
 
 const  HomePage = () => {
   return (
+    // All Home Page Components
     <main>
       <Hero />
       <FeaturedProducts />
