@@ -9,7 +9,7 @@ const FeaturedProducts = () => {
     async function featuredProducts() {
      try{
 
-      const response = await fetch('http://localhost:3000/featured_products');
+      const response = await fetch('http://localhost:5000/featured_products');
       const data = await response.json();
       setProducts(data);
       
