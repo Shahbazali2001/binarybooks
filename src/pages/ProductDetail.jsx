@@ -1,6 +1,30 @@
-import React from "react";
+import { useState, useEffect } from "react";
 
 const ProductDetail = () => {
+
+const [product, setProduct] = useState({});
+
+useEffect(()=>{
+
+  async function fetchProductDetails(){
+    try{
+      
+      const response = await fetch(`http://localhost:5000/products/${id}`);
+      const data = await response.json();
+      setProduct(data);
+
+    }catch(error){
+      console.error('Error fetching products:', error);
+    }
+  }
+  fetchProductDetails();
+
+}, [])
+
+
+
+
+
   return (
     <main>
       <section>
