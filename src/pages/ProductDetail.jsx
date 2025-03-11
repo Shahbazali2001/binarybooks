@@ -22,7 +22,7 @@ useEffect(()=>{
   }
   fetchProductDetails();
 
-}, [])
+}, [id]);
 
 
  const {name, overview, long_description, price, poster, rating, best_seller, in_stock, size} = product;
