@@ -1,8 +1,18 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 const Header = () => {
 
 const [darkMode, setDarkMode] = useState(false);
+
+useEffect(()=>{
+  if(darkMode){
+    document.documentElement.classList.add('dark');
+  }else{
+    document.documentElement.classList.remove('dark');
+  }
+
+},[darkMode]);
+
 
 
   return (
@@ -24,7 +34,7 @@ const [darkMode, setDarkMode] = useState(false);
             </span>
           </Link>
           <div className="flex items-center space-x-6 rtl:space-x-reverse">
-            <span onClick={() => {}} className="bi bi-gear-wide-connected cursor-pointer text-xl text-gray-500 dark:text-white"></span>
+            <span onClick={() => {setDarkMode(!darkMode)}} className="bi bi-gear-wide-connected cursor-pointer text-xl text-gray-500 dark:text-white"></span>
             <span className="bi bi-search cursor-pointer text-xl text-gray-500 dark:text-white"></span>
                 <Link
                   to="/cart"
