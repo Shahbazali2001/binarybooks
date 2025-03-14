@@ -7,11 +7,11 @@ function App() {
 
   return (
     // Header and Footer 
-    <>
+    <div className='dark:bg-dark dark:text-light'>
      <Header />
      <AllRoutes />
      <Footer />
-    </>
+    </div>
   )
 }
 
