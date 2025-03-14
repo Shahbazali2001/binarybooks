@@ -19,7 +19,7 @@ const Header = () => {
             </span>
           </Link>
           <div className="flex items-center space-x-6 rtl:space-x-reverse">
-            <span className="bi bi-gear-wide-connected cursor-pointer text-xl text-gray-500 dark:text-white"></span>
+            <span onClick={() => {}} className="bi bi-gear-wide-connected cursor-pointer text-xl text-gray-500 dark:text-white"></span>
             <span className="bi bi-search cursor-pointer text-xl text-gray-500 dark:text-white"></span>
                 <Link
                   to="/cart"
