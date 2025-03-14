@@ -1,5 +1,10 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 const Header = () => {
+
+const [darkMode, setDarkMode] = useState(false);
+
+
   return (
     
     <header>
