@@ -2,17 +2,18 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 const Header = () => {
 
-const [darkMode, setDarkMode] = useState(false);
+const [darkMode, setDarkMode] = useState(JSON.parse(localStorage.getItem('darkMode')) || false);
 
 useEffect(()=>{
   if(darkMode){
     document.documentElement.classList.add('dark');
+    localStorage.setItem('darkMode', darkMode);
   }else{
     document.documentElement.classList.remove('dark');
+    localStorage.removeItem('darkMode');
   }
 
 },[darkMode]);
-
 
 
   return (
