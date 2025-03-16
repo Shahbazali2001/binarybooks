@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
+import Search from "../Sections/Search";
 const Header = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [showSearch, setShowSearch] = useState(false);
 
 const [darkMode, setDarkMode] = useState(JSON.parse(localStorage.getItem('darkMode')) || false);
 
@@ -36,7 +39,7 @@ useEffect(()=>{
           </Link>
           <div className="flex items-center space-x-6 rtl:space-x-reverse">
             <span onClick={() => {setDarkMode(!darkMode)}} className="bi bi-gear-wide-connected cursor-pointer text-xl text-gray-500 dark:text-white"></span>
-            <span className="bi bi-search cursor-pointer text-xl text-gray-500 dark:text-white"></span>
+            <span onClick={() => {setShowSearch(!showSearch)}} className="bi bi-search cursor-pointer text-xl text-gray-500 dark:text-white"></span>
                 <Link
                   to="/cart"
                   className="bi bi-cart-plus cursor-pointer text-xl text-gray-500 dark:text-white"
@@ -48,6 +51,7 @@ useEffect(()=>{
           </div>
         </div>
       </nav>
+     { showSearch && <Search /> }
     </header>
   );
 };
