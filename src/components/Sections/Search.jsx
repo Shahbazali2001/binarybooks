@@ -5,16 +5,16 @@ import { useRef } from 'react';
 const Search = () => {
     const navigate = useNavigate();
     const searchInput = useRef();
+    
 
     const handleSearch = (e) => {
         e.preventDefault();
-        navigate(`/products?q=${searchInput.current.value}`);
-
-        // const searchTerm = e.target.search.value;
-        // console.log(searchTerm); 
+        const query = searchInput.current.value.trim();
+        if(query){
+            navigate(`/products?q=${query}`);
+        }
+        
     }
-
-
 
 
   return (
