@@ -5,15 +5,17 @@ import FilterBar from './components/FilterBar'
 const ProductsList = () => {
     const [show, setShow] = useState(false);
     const [products, setProducts] = useState([]);
-    const search = useLocation().search;
-    const searchTerm = new URLSearchParams(search).get('q');
+    const location = useLocation();
+    const searchParams = new URLSearchParams(location.search);
+    const searchTerm = searchParams.get('q') || '';
 
 
     useEffect(() => {
-
+ 
+       if (!searchTerm) return;
         async function fetchProducts() {
             try {
-                const response = await fetch(`http://localhost:5000/products?name_like=${searchTerm || ''}`);
+                const response = await fetch(`http://localhost:5000/products?name_like=${searchTerm}`);
                 const data = await response.json();
                 setProducts(data); 
 
