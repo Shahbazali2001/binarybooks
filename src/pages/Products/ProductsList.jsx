@@ -15,7 +15,7 @@ const ProductsList = () => {
        if (!searchTerm) return;
         async function fetchProducts() {
             try {
-                const response = await fetch(`http://localhost:5000/products?name_like=${searchTerm}`);
+                const response = await fetch(`http://localhost:5000/products?name_like=${ searchTerm ? searchTerm : '' }`); 
                 const data = await response.json();
                 setProducts(data); 
 
