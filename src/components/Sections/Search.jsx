@@ -2,18 +2,21 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom';
 import { useRef } from 'react';
 
-const Search = () => {
+const Search = ({setShowSearch}) => {
     const navigate = useNavigate();
     const searchInput = useRef();
     
 
     const handleSearch = (e) => {
         e.preventDefault();
+        setShowSearch(false);
         const query = searchInput.current.value.trim();
         if(query){
             navigate(`/products?q=${query}`);
         }
-        
+
+        // Clear the input field
+        searchInput.current.value = '';
     }
 
 
