@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Search from "../Sections/Search";
 const Header = () => {
-  const [searchTerm, setSearchTerm] = useState('');
+  
   const [showSearch, setShowSearch] = useState(false);
 
 const [darkMode, setDarkMode] = useState(JSON.parse(localStorage.getItem('darkMode')) || false);
@@ -51,7 +51,7 @@ useEffect(()=>{
           </div>
         </div>
       </nav>
-     { showSearch && <Search /> }
+     { showSearch && <Search setShowSearch={setShowSearch} /> }
     </header>
   );
 };
