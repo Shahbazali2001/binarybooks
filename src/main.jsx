@@ -11,9 +11,9 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Router>
       <FilterProvider>
-      <TitleUpdate />
-      <ScrollToTop /> 
-      <App />
+        <TitleUpdate />
+        <ScrollToTop /> 
+        <App />
       </FilterProvider>
     </Router>
   </StrictMode>

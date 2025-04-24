@@ -20,3 +20,9 @@ export const FilterProvider = ({children}) => {
         </FilterContext.Provider>
     )
 }
+
+
+export const useFilter = () => {
+    const context = React.useContext(FilterContext);
+    return context;
+}   
